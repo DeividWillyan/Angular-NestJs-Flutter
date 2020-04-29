@@ -1,15 +1,15 @@
 # Example of use of Angular, NestJs and Flutter 
 ---
-#### NestJs
+#### NestJs - BACKEND
 - NestJs (NodeJs)
 - TypeOrm
 - Mysql2
 ---
-#### Angular
+#### Angular - FRONTEND
 - Angular 9
 - Bootstrap 4
 ---
-#### Flutter
+#### Flutter - MOBILE
 - Mobx
 - Http
 ---
