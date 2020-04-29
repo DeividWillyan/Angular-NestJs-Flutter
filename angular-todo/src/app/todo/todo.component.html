@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <h1><i>Todo</i></h1>
+    <hr>
+
+
+    <div class="input-group mb-3 mt-5">
+        <input type="text" class="form-control" [(ngModel)]="todo.description" placeholder="Todo description">
+        <div class="input-group-append">
+            <button class="btn btn-outline-success" (click)="todo.id == undefined ? create() : update(todo)" type="button">Save</button>
+        </div>
+    </div>
+
+
+    <div class="card mt-3">
+        <div class="card-header">
+            Todo List
+            <button style="float:right" (click)="findAll()" class="btn btn-sm btn-outline-info">Refresh</button>
+        </div>
+        <div class="card-body">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let todo of todos">
+                        <th [ngStyle]="{'text-decoration-line': todo.done ? 'line-through' : ''}" scope="row">{{todo.id}}</th>
+                        <td [ngStyle]="{'text-decoration-line': todo.done ? 'line-through' : ''}">{{todo.description}}</td>
+                        <td>
+                            <button [hidden]="todo.done" (click)="done(todo)" class="btn btn-sm btn-primary">Done</button>
+                            <button [hidden]="todo.done" (click)="remove(todo.id)" style="margin-left: 5px;" class="btn btn-sm btn-danger">Delete</button>
+                            <button [hidden]="todo.done" (click)="prepareUpdate(todo)" style="margin-left: 5px;" class="btn btn-sm btn-secondary">Update</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>

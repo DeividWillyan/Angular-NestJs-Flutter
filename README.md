@@ -14,4 +14,4 @@
 - Http
 ---
 
-<img src="screenshot.png" width="250">
+<img src="screenshot.png" width="800">
